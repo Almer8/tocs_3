@@ -15,7 +15,7 @@ public class MyHashTable {
         return key.hashCode() & 0xfffffff % m;
     }
     int hash(String key, int p) {
-        return (int) ((h(key) + c1*p + Math.pow(c2*p,2)) % m);
+        return (int) ((h(key) + c1*p + c2 * Math.pow(p,2)) % m);
     }
 
     void put(String key, int value) {
